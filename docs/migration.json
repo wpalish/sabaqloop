@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-24",
+  "from_repository": "https://github.com/wpalish/startup-lab-kz",
+  "to_repository": "https://github.com/wpalish/sabaqloop",
+  "history": "git subtree split of apps/sabaqloop preserved as initial product history",
+  "preserved_subtree_commit": "ead293f11f88ce5af950a74a936b810ca02fa91a",
+  "version": "0.1.0",
+  "tests": {
+    "passed": 14,
+    "failed": 0
+  },
+  "public_demo": {
+    "url": "https://wpalish.github.io/sabaqloop/",
+    "status": "pending_verification"
+  },
+  "app_js_sha256": "55d047edc941bae06b19c435463623b186c84c71941149826bb440c893f9c2d9",
+  "outreach_sent": 0,
+  "buyer_screen": {
+    "companies": 10,
+    "early_pilot": 7,
+    "deferred": 3
+  }
+}

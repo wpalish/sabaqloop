@@ -3,5 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "scripts": {"test": "node --test tests/*.test.js", "start": "python3 -m http.server 8780 --bind 127.0.0.1 --directory dist"}
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "start": "python3 -m http.server 8780 --bind 127.0.0.1 --directory dist"
+  },
+  "description": "Source-linked educational practice with teacher approval and revision-aware review",
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wpalish/sabaqloop.git"
+  }
 }

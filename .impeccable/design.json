@@ -1,0 +1,464 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-24T10:54:04.747069+00:00",
+  "title": "Design System: SabaqLoop",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Reading Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0291 174.42)",
+          "oklch(26% 0.0291 174.42)",
+          "oklch(38% 0.0291 174.42)",
+          "oklch(49% 0.0291 174.42)",
+          "oklch(61% 0.0291 174.42)",
+          "oklch(72% 0.0291 174.42)",
+          "oklch(84% 0.0291 174.42)",
+          "oklch(95% 0.0291 174.42)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Quiet Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0234 163.80)",
+          "oklch(26% 0.0234 163.80)",
+          "oklch(38% 0.0234 163.80)",
+          "oklch(49% 0.0234 163.80)",
+          "oklch(61% 0.0234 163.80)",
+          "oklch(72% 0.0234 163.80)",
+          "oklch(84% 0.0234 163.80)",
+          "oklch(95% 0.0234 163.80)"
+        ]
+      },
+      "pine": {
+        "role": "primary",
+        "displayName": "Pine",
+        "tonalRamp": [
+          "oklch(15% 0.0464 175.54)",
+          "oklch(26% 0.0464 175.54)",
+          "oklch(38% 0.0464 175.54)",
+          "oklch(49% 0.0464 175.54)",
+          "oklch(61% 0.0464 175.54)",
+          "oklch(72% 0.0464 175.54)",
+          "oklch(84% 0.0464 175.54)",
+          "oklch(95% 0.0464 175.54)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0080 98.88)",
+          "oklch(26% 0.0080 98.88)",
+          "oklch(38% 0.0080 98.88)",
+          "oklch(49% 0.0080 98.88)",
+          "oklch(61% 0.0080 98.88)",
+          "oklch(72% 0.0080 98.88)",
+          "oklch(84% 0.0080 98.88)",
+          "oklch(95% 0.0080 98.88)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Working White",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Fine Rule",
+        "tonalRamp": [
+          "oklch(15% 0.0137 134.90)",
+          "oklch(26% 0.0137 134.90)",
+          "oklch(38% 0.0137 134.90)",
+          "oklch(49% 0.0137 134.90)",
+          "oklch(61% 0.0137 134.90)",
+          "oklch(72% 0.0137 134.90)",
+          "oklch(84% 0.0137 134.90)",
+          "oklch(95% 0.0137 134.90)"
+        ]
+      },
+      "soft": {
+        "role": "neutral",
+        "displayName": "Soft Green",
+        "tonalRamp": [
+          "oklch(15% 0.0184 127.15)",
+          "oklch(26% 0.0184 127.15)",
+          "oklch(38% 0.0184 127.15)",
+          "oklch(49% 0.0184 127.15)",
+          "oklch(61% 0.0184 127.15)",
+          "oklch(72% 0.0184 127.15)",
+          "oklch(84% 0.0184 127.15)",
+          "oklch(95% 0.0184 127.15)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Fresh Correction Tint",
+        "tonalRamp": [
+          "oklch(15% 0.0532 126.05)",
+          "oklch(26% 0.0532 126.05)",
+          "oklch(38% 0.0532 126.05)",
+          "oklch(49% 0.0532 126.05)",
+          "oklch(61% 0.0532 126.05)",
+          "oklch(72% 0.0532 126.05)",
+          "oklch(84% 0.0532 126.05)",
+          "oklch(95% 0.0532 126.05)"
+        ]
+      },
+      "error": {
+        "role": "secondary",
+        "displayName": "Terracotta Correction",
+        "tonalRamp": [
+          "oklch(15% 0.1299 28.92)",
+          "oklch(26% 0.1299 28.92)",
+          "oklch(38% 0.1299 28.92)",
+          "oklch(49% 0.1299 28.92)",
+          "oklch(61% 0.1299 28.92)",
+          "oklch(72% 0.1299 28.92)",
+          "oklch(84% 0.1299 28.92)",
+          "oklch(95% 0.1299 28.92)"
+        ]
+      },
+      "error-bg": {
+        "role": "secondary",
+        "displayName": "Correction Ground",
+        "tonalRamp": [
+          "oklch(15% 0.0176 39.40)",
+          "oklch(26% 0.0176 39.40)",
+          "oklch(38% 0.0176 39.40)",
+          "oklch(49% 0.0176 39.40)",
+          "oklch(61% 0.0176 39.40)",
+          "oklch(72% 0.0176 39.40)",
+          "oklch(84% 0.0176 39.40)",
+          "oklch(95% 0.0176 39.40)"
+        ]
+      },
+      "amber": {
+        "role": "secondary",
+        "displayName": "Pending Amber",
+        "tonalRamp": [
+          "oklch(15% 0.0887 80.31)",
+          "oklch(26% 0.0887 80.31)",
+          "oklch(38% 0.0887 80.31)",
+          "oklch(49% 0.0887 80.31)",
+          "oklch(61% 0.0887 80.31)",
+          "oklch(72% 0.0887 80.31)",
+          "oklch(84% 0.0887 80.31)",
+          "oklch(95% 0.0887 80.31)"
+        ]
+      },
+      "amber-bg": {
+        "role": "secondary",
+        "displayName": "Pending Ground",
+        "tonalRamp": [
+          "oklch(15% 0.0421 90.77)",
+          "oklch(26% 0.0421 90.77)",
+          "oklch(38% 0.0421 90.77)",
+          "oklch(49% 0.0421 90.77)",
+          "oklch(61% 0.0421 90.77)",
+          "oklch(72% 0.0421 90.77)",
+          "oklch(84% 0.0421 90.77)",
+          "oklch(95% 0.0421 90.77)"
+        ]
+      },
+      "success": {
+        "role": "secondary",
+        "displayName": "Confirmed Green",
+        "tonalRamp": [
+          "oklch(15% 0.0776 152.63)",
+          "oklch(26% 0.0776 152.63)",
+          "oklch(38% 0.0776 152.63)",
+          "oklch(49% 0.0776 152.63)",
+          "oklch(61% 0.0776 152.63)",
+          "oklch(72% 0.0776 152.63)",
+          "oklch(84% 0.0776 152.63)",
+          "oklch(95% 0.0776 152.63)"
+        ]
+      },
+      "pine-hover": {
+        "role": "primary",
+        "displayName": "Pine Hover",
+        "tonalRamp": [
+          "oklch(15% 0.0548 172.43)",
+          "oklch(26% 0.0548 172.43)",
+          "oklch(38% 0.0548 172.43)",
+          "oklch(49% 0.0548 172.43)",
+          "oklch(61% 0.0548 172.43)",
+          "oklch(72% 0.0548 172.43)",
+          "oklch(84% 0.0548 172.43)",
+          "oklch(95% 0.0548 172.43)"
+        ]
+      },
+      "control-border": {
+        "role": "neutral",
+        "displayName": "Control Stroke",
+        "tonalRamp": [
+          "oklch(15% 0.0223 156.59)",
+          "oklch(26% 0.0223 156.59)",
+          "oklch(38% 0.0223 156.59)",
+          "oklch(49% 0.0223 156.59)",
+          "oklch(61% 0.0223 156.59)",
+          "oklch(72% 0.0223 156.59)",
+          "oklch(84% 0.0223 156.59)",
+          "oklch(95% 0.0223 156.59)"
+        ]
+      },
+      "secondary-border": {
+        "role": "neutral",
+        "displayName": "Secondary Stroke",
+        "tonalRamp": [
+          "oklch(15% 0.0253 161.36)",
+          "oklch(26% 0.0253 161.36)",
+          "oklch(38% 0.0253 161.36)",
+          "oklch(49% 0.0253 161.36)",
+          "oklch(61% 0.0253 161.36)",
+          "oklch(72% 0.0253 161.36)",
+          "oklch(84% 0.0253 161.36)",
+          "oklch(95% 0.0253 161.36)"
+        ]
+      },
+      "focus": {
+        "role": "secondary",
+        "displayName": "Focus Amber",
+        "tonalRamp": [
+          "oklch(15% 0.0948 81.24)",
+          "oklch(26% 0.0948 81.24)",
+          "oklch(38% 0.0948 81.24)",
+          "oklch(49% 0.0948 81.24)",
+          "oklch(61% 0.0948 81.24)",
+          "oklch(72% 0.0948 81.24)",
+          "oklch(84% 0.0948 81.24)",
+          "oklch(95% 0.0948 81.24)"
+        ]
+      },
+      "nav-ground": {
+        "role": "neutral",
+        "displayName": "Navigation Ground",
+        "tonalRamp": [
+          "oklch(15% 0.0123 121.70)",
+          "oklch(26% 0.0123 121.70)",
+          "oklch(38% 0.0123 121.70)",
+          "oklch(49% 0.0123 121.70)",
+          "oklch(61% 0.0123 121.70)",
+          "oklch(72% 0.0123 121.70)",
+          "oklch(84% 0.0123 121.70)",
+          "oklch(95% 0.0123 121.70)"
+        ]
+      },
+      "success-bg": {
+        "role": "secondary",
+        "displayName": "Confirmed Ground",
+        "tonalRamp": [
+          "oklch(15% 0.0180 134.92)",
+          "oklch(26% 0.0180 134.92)",
+          "oklch(38% 0.0180 134.92)",
+          "oklch(49% 0.0180 134.92)",
+          "oklch(61% 0.0180 134.92)",
+          "oklch(72% 0.0180 134.92)",
+          "oklch(84% 0.0180 134.92)",
+          "oklch(95% 0.0180 134.92)"
+        ]
+      },
+      "success-border": {
+        "role": "secondary",
+        "displayName": "Confirmed Stroke",
+        "tonalRamp": [
+          "oklch(15% 0.0473 138.15)",
+          "oklch(26% 0.0473 138.15)",
+          "oklch(38% 0.0473 138.15)",
+          "oklch(49% 0.0473 138.15)",
+          "oklch(61% 0.0473 138.15)",
+          "oklch(72% 0.0473 138.15)",
+          "oklch(84% 0.0473 138.15)",
+          "oklch(95% 0.0473 138.15)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Operational page titles; responsive reductions are documented in Layout."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Section and feedback headings."
+      },
+      "question": {
+        "displayName": "Question",
+        "purpose": "The active question prompt."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Reading prose and editable values."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Field labels and compact actions."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Supporting explanations and source excerpts."
+      },
+      "badge": {
+        "displayName": "Badge",
+        "purpose": "Short textual states."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "feedback-in",
+        "value": "180ms ease-out; translateY(4px) to translateY(0)",
+        "purpose": "Feedback settles into place after an answer."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation: none !important; scroll-behavior: auto !important",
+        "purpose": "The source honors prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "stack-workspace",
+        "value": "850px"
+      },
+      {
+        "name": "narrow-layout",
+        "value": "560px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Solid pine action for progressing the active task.",
+      "html": "<button class=\"ds-button\" type=\"button\">Следующее задание</button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.65rem 1rem;border:1px solid var(--pine,#183e35);border-radius:7px;background:var(--pine,#183e35);color:var(--white,#fff);font-weight:650;min-height:44px;cursor:pointer;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:1rem;line-height:1.4;}.ds-button:hover{background:#285548}.ds-button:focus-visible{outline:3px solid var(--focus,#84621c);outline-offset:4px}.ds-button:disabled{opacity:.55;cursor:not-allowed}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Outlined supporting action alongside the primary action.",
+      "html": "<button class=\"ds-button ds-secondary\" type=\"button\">Отмена</button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.65rem 1rem;border:1px solid var(--pine,#183e35);border-radius:7px;background:var(--pine,#183e35);color:var(--white,#fff);font-weight:650;min-height:44px;cursor:pointer;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:1rem;line-height:1.4;}.ds-button:hover{background:#285548}.ds-button:focus-visible{outline:3px solid var(--focus,#84621c);outline-offset:4px}.ds-button:disabled{opacity:.55;cursor:not-allowed}.ds-secondary{background:transparent;color:var(--pine,#183e35);border-color:#82948a}.ds-secondary:hover{background:var(--soft,#eaf0e3)}"
+    },
+    {
+      "name": "Quiet Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Compact list or session action.",
+      "html": "<button class=\"ds-button ds-quiet\" type=\"button\">Редактировать</button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.65rem 1rem;border:1px solid var(--pine,#183e35);border-radius:7px;background:var(--pine,#183e35);color:var(--white,#fff);font-weight:650;min-height:44px;cursor:pointer;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:1rem;line-height:1.4;}.ds-button:hover{background:#285548}.ds-button:focus-visible{outline:3px solid var(--focus,#84621c);outline-offset:4px}.ds-button:disabled{opacity:.55;cursor:not-allowed}.ds-quiet{padding:.4rem .7rem;min-height:38px;background:transparent;border-color:var(--line,#d7ddd4);color:var(--pine,#183e35);font-size:.875rem}.ds-quiet:hover{background:var(--soft,#eaf0e3)}"
+    },
+    {
+      "name": "Danger Button (CSS-only)",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "Defined by the source stylesheet, not currently instantiated in application templates. Hover is retained faithfully rather than endorsed.",
+      "html": "<button class=\"ds-button ds-danger\" type=\"button\">Удалить</button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.65rem 1rem;border:1px solid var(--pine,#183e35);border-radius:7px;background:var(--pine,#183e35);color:var(--white,#fff);font-weight:650;min-height:44px;cursor:pointer;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:1rem;line-height:1.4;}.ds-button:hover{background:#285548}.ds-button:focus-visible{outline:3px solid var(--focus,#84621c);outline-offset:4px}.ds-button:disabled{opacity:.55;cursor:not-allowed}.ds-danger{color:var(--error,#96372d);border-color:#b9796b;background:white}"
+    },
+    {
+      "name": "Labeled Text Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Label, editable white field, and subordinate hint.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-source-title\">Название источника</label><input id=\"ds-source-title\" placeholder=\"Мой конспект занятия\"><span>Материал остаётся в браузере.</span></div>",
+      "css": ".ds-field{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;display:flex;flex-direction:column;gap:.35rem;color:var(--ink,#20352f)}.ds-field label{font-size:.875rem;font-weight:650;line-height:1.55}.ds-field input{font:inherit;min-height:44px;padding:.65rem .75rem;border:1px solid #91a096;border-radius:6px;background:white;color:var(--ink,#20352f);caret-color:var(--pine,#183e35)}.ds-field input:focus-visible{outline:3px solid var(--focus,#84621c);outline-offset:4px}.ds-field span{font-size:.8rem;line-height:1.55;color:var(--muted,#52625a)}"
+    },
+    {
+      "name": "Route Navigation",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Current route gains pine text and a bottom rule.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Пример навигации\"><a href=\"#practice\" aria-current=\"page\">Практика</a><a href=\"#bank\">Банк заданий</a><a href=\"#data\">Данные и копии</a></nav>",
+      "css": ".ds-nav{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;display:flex;gap:1.7rem;padding:0 2rem;overflow:auto;background:#edf0e7;border-bottom:1px solid var(--line,#d7ddd4)}.ds-nav a{white-space:nowrap;display:block;padding:.85rem 0;color:var(--muted,#52625a);text-decoration:none;border-bottom:3px solid transparent;font-size:.92rem;font-weight:600;line-height:1.55}.ds-nav a[aria-current=page]{border-bottom-color:var(--pine,#183e35);color:var(--pine,#183e35)}.ds-nav a:focus-visible{outline:3px solid var(--focus,#84621c);outline-offset:4px}@media(max-width:560px){.ds-nav{padding:0 1.2rem;gap:.8rem}.ds-nav a{font-size:.8rem}}"
+    },
+    {
+      "name": "Text Status Badges",
+      "kind": "chip",
+      "refersTo": "badge",
+      "description": "Noninteractive state labels, including pending review.",
+      "html": "<span class=\"ds-badge\">В практике</span> <span class=\"ds-badge ds-draft\">Нужна проверка</span> <span class=\"ds-badge ds-archived\">В архиве</span>",
+      "css": ".ds-badge{display:inline-block;padding:.15rem .5rem;border-radius:4px;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:.75rem;line-height:1.55;font-weight:650;background:var(--soft,#eaf0e3);color:var(--pine,#183e35)}.ds-draft{color:var(--amber,#755514);background:var(--amber-bg,#fff4d5)}.ds-archived{background:#eceee9;color:#546258}"
+    },
+    {
+      "name": "Working Area",
+      "kind": "card",
+      "refersTo": "work-area",
+      "description": "A flat white task surface on the warm paper ground.",
+      "html": "<section class=\"ds-work\"><h2>Что разберём сегодня?</h2><p>Задания, объяснения и источники остаются рядом.</p></section>",
+      "css": ".ds-work{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--ink,#20352f);line-height:1.55;background:var(--white,#fff);border:1px solid var(--line,#d7ddd4);border-radius:12px;padding:1.7rem;min-width:0}.ds-work h2{font-size:1.22rem;line-height:1.35;letter-spacing:-.015em;margin:0 0 1rem}.ds-work p{margin:0;max-width:72ch;color:var(--muted,#52625a)}@media(max-width:560px){.ds-work{padding:1.2rem}}"
+    },
+    {
+      "name": "Answer Option",
+      "kind": "input",
+      "refersTo": "answer-option",
+      "description": "Radio row with a checked fill and distinct native control.",
+      "html": "<label class=\"ds-option\"><input type=\"radio\" name=\"ds-answer\" checked><span>since</span></label><label class=\"ds-option\"><input type=\"radio\" name=\"ds-answer\"><span>for</span></label>",
+      "css": ".ds-option{display:flex;gap:.8rem;align-items:center;border:1px solid var(--line,#d7ddd4);border-radius:7px;padding:.8rem 1rem;margin:.65rem 0;cursor:pointer;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:1rem;line-height:1.55;color:var(--ink,#20352f);overflow-wrap:anywhere}.ds-option:has(input:checked){border-color:var(--pine,#183e35);background:var(--soft,#eaf0e3)}.ds-option:hover{background:#f4f6f0}.ds-option input{accent-color:var(--pine,#183e35);width:18px;height:18px;flex-shrink:0}.ds-option input:focus-visible{outline:3px solid var(--focus,#84621c);outline-offset:4px}"
+    },
+    {
+      "name": "Feedback with Source Evidence",
+      "kind": "custom",
+      "refersTo": "feedback",
+      "description": "Result and explanation stay paired with their source excerpt.",
+      "html": "<section class=\"ds-feedback\" role=\"status\"><h2>Верно. Двигаемся дальше.</h2><p>Since обозначает начало периода.</p><div class=\"ds-source\"><strong>Источник: учебный пример</strong><blockquote>Use since for the starting point of a period of time.</blockquote></div></section>",
+      "css": ".ds-feedback{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--ink,#20352f);font-size:1rem;line-height:1.55;margin:1.3rem 0;padding:1.2rem;background:#edf5e9;border:1px solid #a3b99c;border-radius:8px;animation:ds-feedback-in 180ms ease-out}.ds-feedback h2{font-size:1.22rem;line-height:1.35;letter-spacing:-.015em;color:var(--success,#255736);margin:0 0 .5rem}.ds-feedback p{margin:0;max-width:72ch}.ds-feedback.ds-wrong{background:var(--error-bg,#fff0eb);border-color:#dbb1a3}.ds-feedback.ds-wrong h2{color:var(--error,#96372d)}.ds-source{font-size:.875rem;margin-top:1rem;border-top:1px solid var(--line,#d7ddd4);padding-top:1rem;overflow-wrap:anywhere}.ds-source blockquote{margin:.6rem 0 0;white-space:pre-wrap;color:var(--muted,#52625a)}@keyframes ds-feedback-in{from{transform:translateY(4px)}to{transform:translateY(0)}}@media(prefers-reduced-motion:reduce){.ds-feedback{animation:none}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Teacher’s Correction Key",
+    "overview": "Pine ink anchors a warm paper workspace. White work areas hold the active task; quiet green notes and narrow evidence sections keep explanations close to the material they explain. Density comes from ordinary reading and form controls, with no decorative imagery competing with a question.\n\nThis is an operational interface: a modest system sans hierarchy, clear labels, restrained color states, and flat bordered surfaces. The recurring visual signature is an answer or question paired with a source excerpt beneath a fine divider.",
+    "keyCharacteristics": [
+      "Pine masthead and actions over a warm paper ground.",
+      "White task areas, fine rules, and compact softly rounded controls.",
+      "Adjacent explanations, source excerpts, and answer history.",
+      "Text-labelled green, amber, and terracotta states."
+    ],
+    "rules": [
+      {
+        "name": "The Ink and Paper Rule",
+        "body": "Use pine for the masthead, primary actions, and active navigation; keep reading and form surfaces on paper or white.",
+        "section": "colors"
+      },
+      {
+        "name": "The Readable Evidence Rule",
+        "body": "Keep question and source text in the reading hierarchy; metadata stays visibly subordinate without replacing labels.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Working Sheet Rule",
+        "body": "Separate surfaces with tone and fine borders. The current system has no box-shadow vocabulary.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use the recorded pine, paper, white, and state colors for their existing roles.",
+      "Do keep a source excerpt visibly paired with the question or feedback it supports.",
+      "Do retain text labels for approval, pending, error, and answer states.",
+      "Do keep the source’s visible focus outline and reduced-motion behavior.",
+      "Do collapse the work area and supporting column before compressing the reading text."
+    ],
+    "donts": [
+      "Don't add elevated shadows to the flat working-sheet components.",
+      "Don't use amber pending treatment as the only error cue.",
+      "Don't turn source text into decorative imagery or hide it behind an unlabeled icon.",
+      "Don't infer a display-font or illustration system from this operational interface."
+    ]
+  }
+}

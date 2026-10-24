@@ -1,0 +1,76 @@
+{
+  "version": "0.1.0",
+  "verified_at": "2026-10-24",
+  "automated": {
+    "command": "npm test",
+    "runtime": "Node.js 22.23.1",
+    "tests": 14,
+    "passed": 14,
+    "failed": 0,
+    "scope": [
+      "domain grading and teacher approval",
+      "immutable attempt snapshots on edit",
+      "review queue and dates",
+      "backup validation and rejection of forged grades",
+      "storage corruption preservation",
+      "stale-tab revision guard"
+    ]
+  },
+  "build": {
+    "command": "npm run build",
+    "result": "passed",
+    "scope": "static site files built without external npm dependencies"
+  },
+  "browser": {
+    "tools": "CUA native/Playwright UI controls; DOM read-only checks",
+    "data": "original demonstration questions and explicitly synthetic QA material",
+    "viewports": [
+      1440,
+      1280,
+      390
+    ],
+    "horizontal_overflow_390": false,
+    "scenarios_passed": [
+      "empty workspace without fabricated results",
+      "sample loads original questions",
+      "single-choice incorrect response and source feedback",
+      "short answer case normalization",
+      "three-question completion result 2/3",
+      "reload preserves attempts",
+      "wrong answer appears in immediate review",
+      "correct review removes current mistake",
+      "create deck and source-grounded cloze drafts",
+      "teacher approval",
+      "edit creates version 2 and resets approval",
+      "download actual JSON backup",
+      "invalid backup rejected",
+      "valid backup preview and explicit restore",
+      "one-action sample opens first question after review fix",
+      "valid file then invalid file clears previous pending preview"
+    ]
+  },
+  "design_review": {
+    "initial_disposition": "fix",
+    "fixes": [
+      "one-action sample launch",
+      "clear pending import before validating a newly selected file"
+    ],
+    "verdict": "ship",
+    "verdict_scope": "both scored material fixes resolved; no external comp or quality-bar ceiling assessment",
+    "detector_runs": 1
+  },
+  "not_verified": [
+    "real classroom learner outcomes",
+    "payments or marketplace seller onboarding",
+    "account separation or cloud classroom, absent from this version",
+    "all 100 reference product implementations",
+    "competitor internal defects",
+    "search indexing, rankings, organic traffic and sales"
+  ],
+  "public_deployment": {
+    "http_status": 200,
+    "app_source_hash_matches": true,
+    "browser_sample_feedback_and_reload": "passed",
+    "workflow": "https://github.com/wpalish/startup-lab-kz/actions/runs/40087868845"
+  }
+}

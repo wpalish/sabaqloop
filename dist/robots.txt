@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wpalish.github.io/sabaqloop/sitemap.xml
