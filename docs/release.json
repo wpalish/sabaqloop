@@ -1,0 +1,38 @@
+{
+  "version": "0.1.0",
+  "product": "SabaqLoop",
+  "implementation": "local-first functional prototype",
+  "repository": "https://github.com/wpalish/sabaqloop",
+  "public_demo": {
+    "url": "https://wpalish.github.io/sabaqloop/",
+    "status": "live_verified",
+    "http_status": 200,
+    "workflow": "https://github.com/wpalish/sabaqloop/actions/runs/40090820767",
+    "verified_code_commit": "31f702290a113386e1d11c5b0e491dd850f16234",
+    "browser_verification": "existing synthetic attempts preserved across URL migration; due error reviewed correctly; source and next repeat displayed; repository link points to standalone repo"
+  },
+  "astana_hub": {
+    "status": "draft_saved_not_submitted",
+    "reason": "three accepted posts already dated 2026-10-24; official maximum three posts per day",
+    "rules": "https://astanahub.com/static/files/advise_ru.pdf",
+    "post_id": 155541,
+    "title": "Запустил SabaqLoop: учебная практика с источниками и повторением ошибок",
+    "saved_at": "2026-10-24",
+    "body_and_links_verified_in_preview": true,
+    "published": false,
+    "submitted_to_moderation": false,
+    "next_required_action": "Update links in existing draft 155541, recheck current rules and posting count, then submit within the platform limit. Heartbeat 100 continues this work; do not create a duplicate.",
+    "saved_draft_links_need_update": true
+  },
+  "scope": {
+    "reference_id": 43,
+    "reference_name": "Knowt",
+    "full_reference_parity": false
+  },
+  "payments_and_sales": {
+    "listings_submitted": 0,
+    "payments_configured": false,
+    "verified_customers": 0,
+    "verified_revenue": null
+  }
+}
