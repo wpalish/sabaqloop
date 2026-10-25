@@ -2,93 +2,111 @@ TAP version 13
 # Subtest: a draft cannot enter practice before teacher approval
 ok 1 - a draft cannot enter practice before teacher approval
   ---
-  duration_ms: 16.499542
+  duration_ms: 10.801083
   type: 'test'
   ...
 # Subtest: strict short-answer grading preserves numbers and accepts only declared alternatives
 ok 2 - strict short-answer grading preserves numbers and accepts only declared alternatives
   ---
-  duration_ms: 0.228125
+  duration_ms: 0.267333
   type: 'test'
   ...
 # Subtest: wrong answers enter the due queue and successful reviews move them forward
 ok 3 - wrong answers enter the due queue and successful reviews move them forward
   ---
-  duration_ms: 0.294833
+  duration_ms: 0.359542
   type: 'test'
   ...
 # Subtest: editing creates a new draft without rewriting historical questions or grades
 ok 4 - editing creates a new draft without rewriting historical questions or grades
   ---
-  duration_ms: 0.2495
+  duration_ms: 0.25125
   type: 'test'
   ...
 # Subtest: backup round trip retains original histories and due schedules
 ok 5 - backup round trip retains original histories and due schedules
   ---
-  duration_ms: 0.681916
+  duration_ms: 0.77375
   type: 'test'
   ...
 # Subtest: corrupt files, duplicate IDs, invalid relations and forged grades are rejected
 ok 6 - corrupt files, duplicate IDs, invalid relations and forged grades are rejected
   ---
-  duration_ms: 0.196208
+  duration_ms: 0.892584
   type: 'test'
   ...
 # Subtest: unsafe source URLs and embedded credentials are rejected
 ok 7 - unsafe source URLs and embedded credentials are rejected
   ---
-  duration_ms: 0.056708
+  duration_ms: 0.633958
   type: 'test'
   ...
 # Subtest: text drafts are grounded in exact source excerpts and remain unapproved
 ok 8 - text drafts are grounded in exact source excerpts and remain unapproved
   ---
-  duration_ms: 1.221167
+  duration_ms: 1.243709
   type: 'test'
   ...
 # Subtest: single-choice answers must be among distinct options
 ok 9 - single-choice answers must be among distinct options
   ---
-  duration_ms: 0.2035
+  duration_ms: 0.334583
   type: 'test'
   ...
 # Subtest: empty workspaces contain no fabricated learner results
 ok 10 - empty workspaces contain no fabricated learner results
   ---
-  duration_ms: 0.123917
+  duration_ms: 0.349542
+  type: 'test'
+  ...
+# Subtest: restore confirmation rejects changed,deleted,new,or corrupt raw workspace without changing either saved key
+ok 11 - restore confirmation rejects changed,deleted,new,or corrupt raw workspace without changing either saved key
+  ---
+  duration_ms: 11.715167
+  type: 'test'
+  ...
+# Subtest: explicit current preview restores valid replacement and retains exact previous valid or corrupt data
+ok 12 - explicit current preview restores valid replacement and retains exact previous valid or corrupt data
+  ---
+  duration_ms: 1.231625
+  type: 'test'
+  ...
+# Subtest: failed workspace write restores older recovery or its absence;failed recovery write leaves workspace unchanged
+ok 13 - failed workspace write restores older recovery or its absence;failed recovery write leaves workspace unchanged
+  ---
+  duration_ms: 0.5495
   type: 'test'
   ...
 # Subtest: a stale tab cannot overwrite a newer attempt
-ok 11 - a stale tab cannot overwrite a newer attempt
+ok 14 - a stale tab cannot overwrite a newer attempt
   ---
-  duration_ms: 16.276792
+  duration_ms: 10.860125
   type: 'test'
   ...
 # Subtest: corruption is preserved and never silently reset
-ok 12 - corruption is preserved and never silently reset
+ok 15 - corruption is preserved and never silently reset
   ---
-  duration_ms: 0.73675
+  duration_ms: 0.250833
   type: 'test'
   ...
 # Subtest: restoring a backup retains the previous local copy for recovery
-ok 13 - restoring a backup retains the previous local copy for recovery
+ok 16 - restoring a backup retains the previous local copy for recovery
   ---
-  duration_ms: 1.727875
+  duration_ms: 0.278459
   type: 'test'
   ...
 # Subtest: storage denial returns an actionable error without inventing saved state
-ok 14 - storage denial returns an actionable error without inventing saved state
+ok 17 - storage denial returns an actionable error without inventing saved state
   ---
-  duration_ms: 0.065
+  duration_ms: 0.054042
   type: 'test'
   ...
-1..14
-# tests 14
+1..17
+# tests 17
 # suites 0
-# pass 14
+# pass 17
 # fail 0
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 98.369458
+# duration_ms 81.060708

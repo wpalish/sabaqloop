@@ -22,10 +22,28 @@ export function saveWorkspace(next, expectedRevision, storage = localStorage) {
   catch { throw new Error('Не удалось сохранить данные: закончилось место или хранилище заблокировано. Экспортируйте резервную копию.'); }
   return checked;
 }
-export function restoreWorkspace(next, storage = localStorage) {
+export function restoreWorkspace(next, storage = localStorage, expectedRaw) {
   const checked = validateWorkspace(next);
   const previous = storage.getItem(STORAGE_KEY);
-  if (previous) storage.setItem(RECOVERY_KEY, previous);
-  storage.setItem(STORAGE_KEY,JSON.stringify(checked));
+  if (expectedRaw !== undefined && previous !== expectedRaw) {
+    throw new Error('Данные изменились в другой вкладке после просмотра. Обновите данные и выберите файл заново.');
+  }
+  const olderRecovery = storage.getItem(RECOVERY_KEY);
+  if (previous !== null) {
+    try { storage.setItem(RECOVERY_KEY, previous); }
+    catch { throw new Error('Не удалось сохранить предыдущую копию. Текущие данные не заменены. Экспортируйте их и проверьте доступ к хранилищу.'); }
+  }
+  try { storage.setItem(STORAGE_KEY,JSON.stringify(checked)); }
+  catch {
+    if (previous !== null) {
+      try {
+        if (olderRecovery === null) storage.removeItem(RECOVERY_KEY);
+        else storage.setItem(RECOVERY_KEY, olderRecovery);
+      } catch {
+        throw new Error('Новая копия не записана. Не удалось вернуть прежнюю recovery-копию: хранилище заблокировано. Текущие данные не заменены; экспортируйте обе доступные копии.');
+      }
+    }
+    throw new Error('Не удалось записать новую копию. Текущие данные и предыдущая копия сохранены. Освободите место или разрешите хранилище.');
+  }
   return checked;
 }

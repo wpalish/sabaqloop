@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-25",
+  "baseline": "952539fe0efdb73703304343e49a4a185b55441f",
+  "product": "SabaqLoop",
+  "scope": "Backup confirmation and recovery write-failure handling;not whole interface/security audit",
+  "tests": {
+    "passed": 17,
+    "added": 3,
+    "baseline_failed": 2,
+    "baseline_passed_control": 1,
+    "old_tests": 14,
+    "write_failure_simulation": true,
+    "actual_browser_quota_failure": false
+  },
+  "browser": {
+    "baseline": {
+      "current_attempts_after_stale_confirm": 0,
+      "newer_attempts_in_recovery": 2,
+      "irreversible_loss_claimed": false
+    },
+    "fixed": {
+      "stale_confirmation_refused": true,
+      "all_workspace_fields_unchanged": true,
+      "old_recovery_unchanged": true,
+      "attempts": 2,
+      "revision": 4,
+      "local_action_clears_preview": true,
+      "local_action_decks": 2,
+      "local_action_cards": 6,
+      "local_action_attempt_snapshots_unchanged": true,
+      "explicit_fresh_restore_and_reload": true,
+      "replacement_cards": 1,
+      "replacement_attempts": 0,
+      "previous_copy_exactly_local_state": true
+    },
+    "scope": "Actual UI file chooser/download exports,two synthetic localhost tabs. Storage write failures are simulated separately by unit tests,not browser quota exhaustion."
+  },
+  "rules": [
+    "UI confirmation compares exact current raw workspace with the workspace observed when the file was selected. Changed/deleted/new/corrupt raw data rejects before writing either key.",
+    "Successful local save,reload and cancel clear pending import and invalidate asynchronous file reads.",
+    "Normal explicit restore retains previous raw workspace,including corrupted data,for recovery.",
+    "If workspace write fails after recovery write,older recovery is restored or removed to preserve its prior absence. Failed recovery write aborts before replacing workspace."
+  ],
+  "limits": [
+    "localStorage has no multi-key transaction or cross-tab compare-and-swap lock. This is a synchronous pre-write stale-state check,not atomic cross-tab serialization.",
+    "If storage also blocks compensating rollback,an explicit error reports inability to restore older recovery. Live workspace remains unchanged in the simulated failure;older recovery is not guaranteed. Export copies before restore.",
+    "The optional expectedRaw argument remains optional for internal callers;all UI confirmation paths pass it. No protected roles/cloud storage.",
+    "Previous snapshots,approval/version logic and grading unchanged. No learner outcome claim."
+  ],
+  "runtime": {
+    "main_pid": 93310,
+    "restarted": false,
+    "all_18_workspace_payload_revision_audit_unchanged": true,
+    "record": "work/program/runtime-checks/sabaqloop-restore-20261025"
+  },
+  "screens": [
+    "restore-before.jpg",
+    "restore-stale-refused.jpg",
+    "restore-complete.jpg"
+  ]
+}

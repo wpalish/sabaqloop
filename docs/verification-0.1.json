@@ -3,9 +3,9 @@
   "verified_at": "2026-10-24",
   "automated": {
     "command": "npm test",
-    "runtime": "Node.js 22.23.1",
-    "tests": 14,
-    "passed": 14,
+    "runtime": "Node.js v22.23.1",
+    "tests": 17,
+    "passed": 17,
     "failed": 0,
     "scope": [
       "domain grading and teacher approval",
@@ -14,7 +14,8 @@
       "backup validation and rejection of forged grades",
       "storage corruption preservation",
       "stale-tab revision guard"
-    ]
+    ],
+    "latest_checked_at": "2026-10-25"
   },
   "build": {
     "command": "npm run build",
@@ -72,5 +73,12 @@
     "app_source_hash_matches": true,
     "browser_sample_feedback_and_reload": "passed",
     "workflow": "https://github.com/wpalish/startup-lab-kz/actions/runs/40087868845"
+  },
+  "followup": {
+    "date": "2026-10-25",
+    "tests": 17,
+    "evidence": "docs/restore-verification.json",
+    "change": "stale restore confirmation rejected;recovery compensation after failed workspace write;local changes cancel pending preview",
+    "scope": "Backup confirmation and recovery write-failure handling;not whole interface/security audit"
   }
 }

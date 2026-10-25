@@ -5,10 +5,11 @@ const $ = s => document.querySelector(s);
 const esc = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const when = value => new Intl.DateTimeFormat('ru-KZ',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}).format(new Date(value));
 const initial = readWorkspace();
-let state=initial.state, rawRecovery=initial.raw, storageError=initial.error;
-let route='practice', deckId='', statusFilter='all', editing=null, session=null, pendingBackup=null, importRead=0;
+let state=initial.state, rawRecovery=initial.raw, storageError=initial.error, observedRaw=initial.raw;
+let route='practice', deckId='', statusFilter='all', editing=null, session=null, pendingBackup=null, pendingRestoreRaw, importRead=0;
 const notice = (message,error=false) => {$('#notice').textContent=message;$('#notice').classList.toggle('error',error);};
-function persist(next){state=saveWorkspace(next,state.revision);}
+function clearImport(){pendingBackup=null;pendingRestoreRaw=undefined;importRead++;}
+function persist(next){state=saveWorkspace(next,state.revision);observedRaw=JSON.stringify(state);clearImport();}
 function execute(fn){try{fn();}catch(e){notice(e.message,true);$('#notice').scrollIntoView({block:'nearest'});}}
 function focusMain(){ $('#main').focus({preventScroll:true}); }
 function sourceHtml(s){return `<div class="source"><strong>Источник: ${esc(s.title)}</strong>${s.url?` · <a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">Открыть</a>`:''}<blockquote>${esc(s.excerpt)}</blockquote></div>`;}
@@ -63,9 +64,9 @@ document.addEventListener('click',event=>{
   if(action==='export'){download(encodeBackup(state),'sabaqloop-backup.json');notice('Копия подготовлена для скачивания.');return;}
   if(action==='export-raw'){download(rawRecovery,'sabaqloop-original-recovery.json');return;}
   if(action==='recovery'){const old=localStorage.getItem(RECOVERY_KEY);if(!old)throw new Error('Предыдущей копии пока нет. Она создаётся перед восстановлением из файла.');download(old,'sabaqloop-previous-copy.json');return;}
-  if(action==='cancel-import')pendingBackup=null;
-  if(action==='import'){state=restoreWorkspace(pendingBackup);storageError=null;pendingBackup=null;editing=null;session=null;deckId='';notice('Проверенная копия восстановлена. Предыдущая сохранена отдельно.');}
-  if(action==='reload'){const loaded=readWorkspace();state=loaded.state;storageError=loaded.error;rawRecovery=loaded.raw;session=null;editing=null;notice(loaded.error||'Данные обновлены.',!!loaded.error);}
+  if(action==='cancel-import')clearImport();
+  if(action==='import'){if(!pendingBackup||pendingRestoreRaw===undefined)throw new Error('Выберите JSON-копию и проверьте её заново.');state=restoreWorkspace(pendingBackup,localStorage,pendingRestoreRaw);observedRaw=JSON.stringify(state);storageError=null;clearImport();editing=null;session=null;deckId='';notice('Проверенная копия восстановлена. Предыдущая сохранена отдельно.');}
+  if(action==='reload'){const loaded=readWorkspace();state=loaded.state;storageError=loaded.error;rawRecovery=loaded.raw;observedRaw=loaded.raw;clearImport();session=null;editing=null;notice(loaded.error||'Данные обновлены.',!!loaded.error);}
   render();if(['next','finish','edit','cancel-edit'].includes(action))focusMain();
  });
 });
@@ -83,9 +84,9 @@ document.addEventListener('change',event=>{
  if(event.target.id==='deck-filter'){deckId=event.target.value;session=null;editing=null;render();}
  if(event.target.id==='status-filter'){statusFilter=event.target.value;render();}
  if(event.target.id==='backup-file'){
-  const file=event.target.files[0], readId=++importRead;pendingBackup=null;render();if(!file)return;
+  const file=event.target.files[0];clearImport();const readId=importRead,previewRaw=observedRaw;render();if(!file)return;
   if(file.size>5_000_000){notice('Файл больше 5 МБ. Текущие данные не изменены.',true);return;}
-  notice('Проверяем файл…');file.text().then(content=>{if(readId!==importRead)return;execute(()=>{pendingBackup=parseBackup(content);notice('Файл проверен. Подтвердите замену ниже.');render();});}).catch(()=>{if(readId===importRead)notice('Не удалось прочитать файл. Выберите JSON-копию ещё раз.',true);});
+  notice('Проверяем файл…');file.text().then(content=>{if(readId!==importRead)return;execute(()=>{pendingBackup=parseBackup(content);pendingRestoreRaw=previewRaw;notice('Файл проверен. Подтвердите замену ниже.');render();});}).catch(()=>{if(readId===importRead)notice('Не удалось прочитать файл. Выберите JSON-копию ещё раз.',true);});
  }
 });
 window.addEventListener('hashchange',()=>{session=null;editing=null;notice('');render();focusMain();});
