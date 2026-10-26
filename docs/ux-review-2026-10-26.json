@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-26",
+  "base_commit": "0f9b89a9d01d4f5704bcec439752b442f1303480",
+  "change": "question bank search and filter recovery",
+  "automated_tests": {
+    "name": "sabaqloop",
+    "exit": 0,
+    "seconds": 0.27,
+    "tests": 17,
+    "pass": 17,
+    "fail": 0
+  },
+  "automated_command": "Node v24.19.0: node --test tests/*.test.js",
+  "browser": {
+    "name": "sabaqloop",
+    "passed": true,
+    "checks": [
+      "literal question search",
+      "empty search and reset",
+      "combined status and search reset",
+      "case insensitive search",
+      "mobile bank layout",
+      "reload preserves original material",
+      "no JavaScript errors"
+    ]
+  },
+  "capture_widths": [
+    390,
+    768,
+    1440
+  ],
+  "synthetic_data_only": true,
+  "scope_limits": [
+    "No live customer or market validation",
+    "No full accessibility conformance assessment",
+    "Repository domain logic unchanged; checks cover this UX increment"
+  ],
+  "files_sha256": {
+    "dist/app.js": "8516e63ecb85607775be6fa483c6193010a1efe62315ecfb5d7a497eca9334ff",
+    "dist/styles.css": "67ebf72297a1e93acf18165dd9f700d5d663c3fb75d6ba62ebf767b05fcba098"
+  }
+}

@@ -277,3 +277,8 @@ The global live notice is absent when empty. A populated notice uses soft green,
 - **Don't** infer a display-font or illustration system from this operational interface.
 
 **Not canonized:** the CSS-only danger button’s inherited hover has no independently designed or reviewed treatment. No app repair, external quality-bar comparison, or approval of the whole surface is claimed by this documentation pass.
+
+
+## Bank search refinement · 26 October 2026
+
+The existing green learning workspace, typography and local storage contract remain authoritative. Bank search matches literal case-insensitive text in the question, answer, source title or excerpt, combined with the selected deck and status. A visible result count and an explicit search/status reset support an empty result. The responsive two-column filter toolbar stacks below 700px. Selected answer options receive the existing pale-green selection surface. No answer, approval, review date or stored material is changed by filtering.
