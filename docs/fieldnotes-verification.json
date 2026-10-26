@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-26",
+  "timezone": "Asia/Almaty",
+  "selected_option": 2,
+  "design_qa": "passed",
+  "automated": {
+    "runtime": "Node v24.19.0",
+    "tests": 19,
+    "passed": 19,
+    "failed": 0,
+    "command": "node --test tests/*.test.js"
+  },
+  "browser": {
+    "surface": "Codex in-app browser",
+    "viewports": [
+      390,
+      768,
+      1487
+    ],
+    "horizontal_page_overflow": false,
+    "console_errors": [],
+    "scenarios_passed": [
+      "empty workspace",
+      "sample",
+      "question selection",
+      "bank search / empty / reset",
+      "status filtering",
+      "approval gate",
+      "wrong answer and repeat queue",
+      "version 2 draft after edit",
+      "historical version 1 after reload",
+      "new deck",
+      "drafts from original material",
+      "manual draft",
+      "long source and escaped title",
+      "downloaded JSON backup",
+      "explicit restore",
+      "light and dark theme",
+      "keyboard activation and focus"
+    ],
+    "downloaded_backup": {
+      "cards": 6,
+      "attempts": 1,
+      "current_card_version": 2,
+      "historical_prompt": "Complete: She has lived in Astana ___ 2021."
+    }
+  },
+  "static_checks": [
+    "reduced motion CSS",
+    "reduced transparency CSS",
+    "high contrast CSS",
+    "unchanged domain and storage modules",
+    "Git diff check"
+  ],
+  "limits": [
+    "not an all-browser audit",
+    "OS media preferences not emulated",
+    "not merged or published",
+    "not classroom acceptance or learner outcomes",
+    "other nine products do not have this visual redesign"
+  ]
+}

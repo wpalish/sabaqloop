@@ -1,0 +1,64 @@
+{
+  "product": "sabaqloop",
+  "syntheticOnly": true,
+  "steps": [
+    {
+      "name": "UI export",
+      "counts": [
+        1,
+        3,
+        0
+      ],
+      "pass": true
+    },
+    {
+      "name": "Preview leaves live data intact",
+      "live": [
+        2,
+        6,
+        0
+      ],
+      "preview": [
+        1,
+        3,
+        0
+      ],
+      "pass": true
+    },
+    {
+      "name": "Cancel retains data and focuses file input",
+      "focus": "backup-file",
+      "counts": [
+        2,
+        6,
+        0
+      ],
+      "pass": true
+    },
+    {
+      "name": "Commit focuses main and reload persists",
+      "focus": "main",
+      "counts": [
+        1,
+        3,
+        0
+      ],
+      "pass": true
+    },
+    {
+      "name": "Previous JSON snapshot retains both test decks",
+      "decks": 2,
+      "pass": true
+    },
+    {
+      "name": "Foreign application rejected, live data unchanged",
+      "counts": [
+        1,
+        3,
+        0
+      ],
+      "focus": "notice",
+      "pass": true
+    }
+  ]
+}

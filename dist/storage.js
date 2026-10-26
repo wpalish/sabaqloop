@@ -5,14 +5,14 @@ export function readWorkspace(storage = localStorage) {
   let raw;
   try { raw = storage.getItem(STORAGE_KEY); }
   catch { return {state:null,raw:null,error:'Браузер не разрешил доступ к хранилищу. Разрешите данные сайта или используйте другой профиль.'}; }
-  if (!raw) return {state:createWorkspace(),raw:null,error:null};
+  if (raw === null) return {state:createWorkspace(),raw:null,error:null};
   try { return {state:parseBackup(raw),raw,error:null}; }
   catch (e) { return {state:null,raw,error:`Не удалось открыть сохраненные данные: ${e.message} Сначала сохраните поврежденную копию; данные не сброшены.`}; }
 }
 export function saveWorkspace(next, expectedRevision, storage = localStorage) {
   const checked = validateWorkspace(next);
   const raw = storage.getItem(STORAGE_KEY);
-  if (raw) {
+  if (raw !== null) {
     const current = parseBackup(raw);
     if (current.revision !== expectedRevision || current.workspaceId !== checked.workspaceId) throw new Error('Данные изменились в другой вкладке. Сохраните введенный текст отдельно и нажмите «Обновить данные».');
   } else if (expectedRevision !== 0) {

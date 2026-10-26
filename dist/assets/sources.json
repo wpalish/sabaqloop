@@ -1,0 +1,37 @@
+[
+  {
+    "file": "Lora-regular.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/lora/Lora%5Bwght%5D.ttf",
+    "sha256": "822a6621ccbe8d97d20ac88c1c41f5615c9c2c202eaa75f272cd452aac6475a7"
+  },
+  {
+    "file": "Lora-italic.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/lora/Lora-Italic%5Bwght%5D.ttf",
+    "sha256": "22d8d8854b53807aa664ca34f2031a9ed57a1d0dea296b8b96cdd3aad937a2b3"
+  },
+  {
+    "file": "Lora-OFL.txt",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/lora/OFL.txt",
+    "sha256": "1d9a970809ac804b582a6ce7f0ebc4e7fefcbfd7ff6299cad35ee656a21be716"
+  },
+  {
+    "file": "Caveat.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/caveat/Caveat%5Bwght%5D.ttf",
+    "sha256": "0bdb6b660482d31531b3945849fba5916b3ef8695da7024a9e6b9ee3c4157988"
+  },
+  {
+    "file": "Caveat-OFL.txt",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/caveat/OFL.txt",
+    "sha256": "1f9d81d094273d82f3898a1ee8b598a717d050ecbf5ff7bede105b704880157b"
+  },
+  {
+    "file": "arrow-arc-left.svg",
+    "source": "https://unpkg.com/@phosphor-icons/core@2.1.1/assets/regular/arrow-arc-left.svg",
+    "sha256": "0b7c1aaef1955f5ba7b06a6b76b5de5040c7569b42b0dc3581041944f9ef858b"
+  },
+  {
+    "file": "Phosphor-LICENSE.txt",
+    "source": "https://unpkg.com/@phosphor-icons/core@2.1.1/LICENSE",
+    "sha256": "ddbe6082ec3cf979db47e5af549d2849c5d6182b3e005ef91ce1dbb9eb122f11"
+  }
+]

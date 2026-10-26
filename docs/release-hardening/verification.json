@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-26",
+  "product": "sabaqloop",
+  "state": "local_candidate_tested_not_merged_or_deployed",
+  "syntheticOnly": true,
+  "runtime": "Node24.19.0",
+  "tests": {
+    "tests": 43,
+    "pass": 43,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "exit": 0,
+    "diffCheck": 0
+  },
+  "syntaxFiles": 13,
+  "testLog": "test-output.txt",
+  "previousDesignEvidence": "../pre-release/",
+  "schemaVersionUnchanged": true,
+  "thirdPartyRuntimeDependenciesAdded": 0,
+  "browser": {
+    "product": "sabaqloop",
+    "syntheticOnly": true,
+    "steps": [
+      {
+        "name": "UI export",
+        "counts": [
+          1,
+          3,
+          0
+        ],
+        "pass": true
+      },
+      {
+        "name": "Preview leaves live data intact",
+        "live": [
+          2,
+          6,
+          0
+        ],
+        "preview": [
+          1,
+          3,
+          0
+        ],
+        "pass": true
+      },
+      {
+        "name": "Cancel retains data and focuses file input",
+        "focus": "backup-file",
+        "counts": [
+          2,
+          6,
+          0
+        ],
+        "pass": true
+      },
+      {
+        "name": "Commit focuses main and reload persists",
+        "focus": "main",
+        "counts": [
+          1,
+          3,
+          0
+        ],
+        "pass": true
+      },
+      {
+        "name": "Previous JSON snapshot retains both test decks",
+        "decks": 2,
+        "pass": true
+      },
+      {
+        "name": "Foreign application rejected, live data unchanged",
+        "counts": [
+          1,
+          3,
+          0
+        ],
+        "focus": "notice",
+        "pass": true
+      }
+    ]
+  },
+  "regressions": [
+    "empty active/recovery Storage value is corrupt data, not absent",
+    "foreign product envelopes rejected; raw schemaVersion1 retained",
+    "cancel/preview/error/commit keyboard focus and delayed reads",
+    "submitted draft cleanup fallback survives reload; honest warning if storage blocks both operations"
+  ]
+}

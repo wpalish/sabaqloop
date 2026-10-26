@@ -1,0 +1,8 @@
+/* Shared interaction values. The source-reading theme lives in styles.css. */
+:root {
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', system-ui, sans-serif;
+  --duration-instant: 100ms;
+  --ease-out: cubic-bezier(.23, 1, .32, 1);
+}
+html { -webkit-text-size-adjust: 100%; }
+body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
