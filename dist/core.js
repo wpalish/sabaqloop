@@ -103,7 +103,11 @@ export function parseBackup(input) {
   if (typeof input !== 'string' || new TextEncoder().encode(input).length > MAX_BACKUP_BYTES) throw new Error('Файл должен быть JSON размером до 5 МБ.');
   let parsed;
   try { parsed = JSON.parse(input); } catch { throw new Error('Не удалось прочитать JSON. Текущие данные не изменены.'); }
-  return validateWorkspace(parsed.workspace || parsed);
+  if (parsed && typeof parsed === 'object' && Object.hasOwn(parsed,'workspace')) {
+    if (parsed.application !== 'SabaqLoop') throw new Error('Это не файл резервной копии SabaqLoop. Текущие данные не изменены.');
+    return validateWorkspace(parsed.workspace);
+  }
+  return validateWorkspace(parsed);
 }
 export function encodeBackup(state) {
   return JSON.stringify({application: 'SabaqLoop', exportedAt: new Date().toISOString(), workspace: validateWorkspace(state)}, null, 2);

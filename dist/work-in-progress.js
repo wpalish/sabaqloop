@@ -76,7 +76,12 @@ export function clearFormDraft(storage, key) {
   // A tombstone also prevents a failed remove from resurrecting a submitted form
   // during this page's next render.
   draftsFor(storage).set(key, {raw: null, persisted: true});
-  try { storage.removeItem(key); } catch { /* Saved learning data is independent. */ }
+  try { storage.removeItem(key); return true; }
+  catch {
+    // A persisted null also prevents a submitted draft from returning on reload.
+    try { storage.setItem(key, 'null'); return true; }
+    catch { return false; } // The saved learning row remains valid; UI must report cleanup failure.
+  }
 }
 
 export function readPractice(storage, state) {

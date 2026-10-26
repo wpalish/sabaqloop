@@ -116,3 +116,21 @@ test('temporary draft identity never replaces a valid or corrupt learning worksp
   assert.equal(stabilizeDraftWorkspace(storage,null,'broken-json'),null);
   assert.equal(stabilizeDraftWorkspace(storage,state,JSON.stringify(state)),state);
 });
+
+test('a submitted draft cannot reappear after reload when remove is denied but a tombstone can be saved',()=>{
+ const items=new Map(),storage={getItem:key=>items.get(key)??null,setItem:(key,value)=>items.set(key,value),removeItem(){throw Error('synthetic remove blocked');}};
+ writeFormDraft(storage,'submitted',{prompt:'Already saved synthetic question'});
+ const cleared=clearFormDraft(storage,'submitted');
+ const reloaded={getItem:key=>items.get(key)??null};
+ assert.equal(readFormDraft(reloaded,'submitted'),null);
+ assert.equal(cleared,true);
+});
+
+test('unpersistable submitted-draft cleanup reports failure while the in-page tombstone still prevents resurrection',()=>{
+ const items=new Map(),storage={getItem:key=>items.get(key)??null,setItem:(key,value)=>items.set(key,value),removeItem:key=>items.delete(key)};
+ writeFormDraft(storage,'submitted',{prompt:'Already saved synthetic question'});
+ storage.removeItem=()=>{throw Error('synthetic denied');};storage.setItem=()=>{throw Error('synthetic denied');};
+ assert.equal(clearFormDraft(storage,'submitted'),false);
+ assert.equal(readFormDraft(storage,'submitted'),null);
+ assert.equal(items.has('submitted'),true);
+});

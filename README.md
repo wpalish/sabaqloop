@@ -1,5 +1,8 @@
 # SabaqLoop
 
+Актуальный локальный кандидат: **43/43 тестов**, Node24.19.0. [Свежая проверка](docs/release-hardening/verification.json) · [Состояние предварительного выпуска](PRE_RELEASE.md). PR остаётся черновиком; слияние и публикация не выполнялись.
+
+
 [Открыть приложение](https://wpalish.github.io/sabaqloop/) · [Возможности и ограничения](https://wpalish.github.io/sabaqloop/about.html)
 
 Учебная практика из собственного материала: вопросы с источником, проверка преподавателем, ответы с объяснением, история версий и повторение ошибок. Это самостоятельный репозиторий продукта. Он выделен из Startup Lab KZ с сохранением истории исходного кода.
@@ -37,7 +40,7 @@ npm start
 
 ## Проверка и продажи
 
-В репозитории 19 автоматических тестов. [Отчёт исходной версии](docs/verification-0.1.json) отделяет автоматические, браузерные и публичные проверки от неподтверждённых возможностей.
+В исходном отчёте версии0.1 было19 автоматических тестов. [Отчёт исходной версии](docs/verification-0.1.json) отделяет автоматические, браузерные и публичные проверки от неподтверждённых возможностей.
 
 [Подготовка коммерческого пакета](docs/sales-package.txt). [Потенциальные покупатели и сценарии](docs/buyers.json):10 активных кандидатов и4 отложенных кандидата для проверки интеграции. Ни одна компания не объявляется клиентом без реального подтверждения; обращения не отправляются автоматически.
 
@@ -61,4 +64,8 @@ npm start
 
 ### Pre-release refinement · 26 October 2026
 
-The chosen Fieldnotes interface now includes a useful practice home, resumable rounds and tab-scoped teacher drafts with selected-deck/version isolation. Full suite:30 tests. See [PRE_RELEASE.md](PRE_RELEASE.md) for observed browser checks and remaining release conditions.
+The chosen Fieldnotes interface now includes a useful practice home, resumable rounds and tab-scoped teacher drafts with selected-deck/version isolation. Design-increment suite (historical):30 tests. See [PRE_RELEASE.md](PRE_RELEASE.md) for observed browser checks and remaining release conditions.
+
+## Устойчивость восстановления · 26 октября 2026
+
+Чужие JSON-обёртки и пустые повреждённые значения хранилища отклоняются без молчаливого сброса. Предпросмотр, отмена, применение и ошибки управляют фокусом; отправленный черновик очищается с fallback либо явным предупреждением. Реальный браузерный экспорт/восстановление проверен на отдельном синтетическом origin. [Результаты](docs/release-hardening/verification.json).
