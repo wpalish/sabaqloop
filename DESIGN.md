@@ -36,3 +36,7 @@ Source text always comes from the saved card. Highlighting is lossless and is no
 Approval, revision snapshots, grading, recovery copies and stale-tab guards stay in the existing domain/storage modules. Newly saved drafts are selected for review. Editing creates a new draft and preserves prior attempts. No learner accounts, AI requests, cloud sync or outcome claims were added.
 
 See `design-qa.md` and `docs/fieldnotes-verification.json` for the verification boundary.
+
+## Practice and unfinished work
+
+Practice is a notebook of saved materials, approved questions and attempt history. During a round the margin shows the actual ordered questions and saved-answer state. Feedback stays paired with the exact question/source version. Teacher drafts retain their selected deck, survive tab reload when session storage is available, and warn when only in-page memory is available.

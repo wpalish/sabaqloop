@@ -58,3 +58,7 @@ npm start
 ## Выбранный дизайн · 26 октября 2026
 
 Второй визуальный вариант перенесён в рабочий интерфейс: источник и выбранное задание, указатель вопросов, формы в основной области, светлая и тёмная бумага. [Сравнение с макетом](docs/fieldnotes-comparison.png), [проверка дизайна](design-qa.md), [функциональная проверка](docs/fieldnotes-verification.json). Эти изменения подготовлены в PR; это не подтверждение публикации на GitHub Pages.
+
+### Pre-release refinement · 26 October 2026
+
+The chosen Fieldnotes interface now includes a useful practice home, resumable rounds and tab-scoped teacher drafts with selected-deck/version isolation. Full suite:30 tests. See [PRE_RELEASE.md](PRE_RELEASE.md) for observed browser checks and remaining release conditions.
